@@ -34,7 +34,7 @@ def lambda_handler():
         return 'SIGNATURE ERROR'
     body = json.loads(request.data)
     
-    values = {'u_event': body['eventName'], 'u_eventid': body['eventId'], 'u_payload': request.data }
+    values = {'u_event': body['eventName'], 'u_event_id': body['eventId'], 'u_payload': request.data }
     
     headers = {'Content-Type': 'application/json'}
     
