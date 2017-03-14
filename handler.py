@@ -13,6 +13,8 @@ from datetime import tzinfo, timedelta, datetime
 
 ZERO = timedelta(0) 
 
+app = Flask(__name__)
+
 class UTC(tzinfo):
     def utcoffset(self, dt):
         return ZERO
