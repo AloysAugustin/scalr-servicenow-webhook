@@ -27,7 +27,7 @@ class UTC(tzinfo):
 
 utc = UTC() 
 
-@app.route("/servicenow/")
+@app.route("/servicenow/", methods=['POST'])
 def lambda_handler():
 
     if not validateRequest(request):
