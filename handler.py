@@ -2,7 +2,9 @@ SCALR_SIGNING_KEY = 'enter-your-scalr-signing-key-here'
 USERNAME = 'enter-your-servicenow-username-here' 
 PASSWORD = 'enter-your-servicenow-password-here' 
 URL = 'https://enter-your-servicenow-domain-here/api/now/table/u_scalr_events' 
-
+from flask import Flask
+from flask import request
+from flask import abort
 import urllib2 
 import json 
 import hmac 
