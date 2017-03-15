@@ -1,17 +1,26 @@
-SCALR_SIGNING_KEY = 'enter-your-scalr-signing-key-here' 
-USERNAME = 'enter-your-servicenow-username-here' 
-PASSWORD = 'enter-your-servicenow-password-here' 
-URL = 'https://enter-your-servicenow-domain-here/api/now/table/u_scalr_events' 
+#!/usr/bin/env python
+
 from flask import Flask
 from flask import request
 from flask import abort
 import urllib2 
-import json 
+import json
+import logging
 import hmac 
 import binascii 
 import dateutil.parser 
 from hashlib import sha1 
 from datetime import tzinfo, timedelta, datetime 
+
+
+config_file = './config.json'
+
+# Will be overridden if present in config_file
+SCALR_SIGNING_KEY = ''
+USERNAME = ''
+PASSWORD = ''
+URL = ''
+
 
 ZERO = timedelta(0) 
 
@@ -49,6 +58,7 @@ def lambda_handler():
     
     return response.read()
     
+
 def validateRequest(request):
     if not 'X-Signature' in request.headers or not 'Date' in request.headers:
         return False
@@ -62,3 +72,18 @@ def validateRequest(request):
     now = datetime.now(utc)
     delta = abs((now - date).total_seconds())
     return delta < 300
+
+
+def loadConfig(filename):
+    with open(config_file) as f:
+        options = json.loads(f.read())
+        for key in options:
+            if key in ['USERNAME', 'PASSWORD', 'URL']:
+                logging.info('Loaded config: {}'.format(key))
+                globals()[key] = options[key]
+            elif key in ['SCALR_SIGNING_KEY']:
+                logging.info('Loaded config: {}'.format(key))
+                globals()[key] = options[key].encode('ascii')
+
+loadConfig(config_file)
+logging.basicConfig(level=logging.INFO)
