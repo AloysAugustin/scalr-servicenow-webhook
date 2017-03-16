@@ -55,8 +55,9 @@ def lambda_handler():
     urllib2.install_opener(opener)
     req = urllib2.Request(URL, data, headers)
     response = urllib2.urlopen(req)
-    
-    return response.read()
+    response_text = response.read()
+    logging.debug(response_text)
+    return response_text
     
 
 def validateRequest(request):
