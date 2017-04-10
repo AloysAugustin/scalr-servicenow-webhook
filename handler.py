@@ -40,7 +40,7 @@ utc = UTC()
 def lambda_handler():
 
     if not validateRequest(request):
-        return 'SIGNATURE ERROR'
+        abort(403)
     body = json.loads(request.data)
     
     values = {'u_event': body['eventName'], 'u_event_id': body['eventId'], 'u_payload': request.data }
