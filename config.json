@@ -2,5 +2,6 @@
     "SCALR_SIGNING_KEY": "scalr signing key",
     "USERNAME": "",
     "PASSWORD": "",
-    "URL": "https://enter-your-servicenow-domain-here/api/now/table/u_scalr_events"
+    "PROXY": "",
+    "URL": "https://hclefhdev.service-now.com/u_vmware_virtual_machine_instances.do?WSDL"
 }

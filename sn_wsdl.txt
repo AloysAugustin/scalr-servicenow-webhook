@@ -1,0 +1,1326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.service-now.com/u_vmware_virtual_machine_instances" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://www.service-now.com/u_vmware_virtual_machine_instances" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+        <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.service-now.com/u_vmware_virtual_machine_instances">
+            <xsd:element name="getKeys">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="asset" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="asset_tag" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="assigned" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="assigned_to" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="assignment_group" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="attributes" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="can_print" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="category" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="change_control" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="checked_in" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="checked_out" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="comments" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="company" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="correlation_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cost" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cost_cc" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cost_center" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cpus" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="delivery_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="department" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="discovery_source" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="disks" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="disks_size" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="dns_domain" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="due" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="due_in" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="fault_count" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="first_discovered" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="fqdn" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="gl_account" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="guest_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="image_path" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="install_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="install_status" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="invoice_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="ip_address" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="justification" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="last_discovered" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="lease_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="location" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="mac_address" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="maintenance_schedule" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="managed_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="managed_domain" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="manufacturer" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="memory" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="model_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="model_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="monitor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="name" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="nics" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="object_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="operational_status" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="order_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="owned_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="po_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="purchase_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="schedule" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="serial_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="server" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="short_description" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="skip_sync" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="start_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="state" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="subcategory" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="support_group" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="supported_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_class_name" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_created_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_created_on" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_row" type="xsd:integer"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_set" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_state" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_state_comment" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_mod_count" type="xsd:integer"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_row_error" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_tags" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_target_sys_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_target_table" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_transform_map" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_updated_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_updated_on" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="template" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="template_import_log" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_approved_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_backup" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_business_unit" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_change_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_director" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_group" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_vp_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_configured_memory" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_core" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_cpu" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_decommission_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_disaster_backup" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_disk_space_gb" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_disposal_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_environment" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_floor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ios_or_os_version" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_l2_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_l3_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_l5_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_last_scan_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_manager" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_model_version" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_monitoring_tool" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_disk_drives" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_logical_processors" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_processor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_operating_system" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_os_version" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ppm" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_processor_type" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_project_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_rack" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_received_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_regulatory_compliance" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ritm_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_room" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ru_type" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_substatus" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_tentative_deploy_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_tier_level" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_vcpu" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="unverified" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="vcenter_ref" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="vcenter_uuid" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="vendor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="warranty_expiration" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="__use_view" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="__encoded_query" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="__limit" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="__first_row" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="__last_row" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="getKeysResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="sys_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="count" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="get">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="sys_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="__use_view" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="getResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="asset" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="asset_tag" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="assigned" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="assigned_to" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="assignment_group" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="attributes" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="can_print" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="category" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="change_control" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="checked_in" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="checked_out" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="comments" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="company" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="correlation_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cost" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cost_cc" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cost_center" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cpus" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="delivery_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="department" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="discovery_source" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="disks" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="disks_size" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="dns_domain" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="due" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="due_in" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="fault_count" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="first_discovered" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="fqdn" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="gl_account" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="guest_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="image_path" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="install_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="install_status" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="invoice_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="ip_address" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="justification" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="last_discovered" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="lease_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="location" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="mac_address" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="maintenance_schedule" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="managed_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="managed_domain" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="manufacturer" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="memory" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="model_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="model_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="monitor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="name" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="nics" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="object_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="operational_status" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="order_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="owned_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="po_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="purchase_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="schedule" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="serial_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="server" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="short_description" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="skip_sync" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="start_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="state" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="subcategory" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="support_group" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="supported_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_class_name" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_created_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_created_on" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_row" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_set" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_state" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_state_comment" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_mod_count" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_row_error" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_tags" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_target_sys_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_target_table" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_transform_map" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_updated_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_updated_on" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="template" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="template_import_log" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_approved_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_backup" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_business_unit" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_change_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_director" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_group" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_vp_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_configured_memory" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_core" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_cpu" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_decommission_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_disaster_backup" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_disk_space_gb" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_disposal_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_environment" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_floor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ios_or_os_version" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_l2_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_l3_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_l5_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_last_scan_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_manager" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_model_version" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_monitoring_tool" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_disk_drives" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_logical_processors" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_processor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_operating_system" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_os_version" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ppm" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_processor_type" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_project_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_rack" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_received_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_regulatory_compliance" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ritm_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_room" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ru_type" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_substatus" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_tentative_deploy_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_tier_level" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_vcpu" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="unverified" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="vcenter_ref" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="vcenter_uuid" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="vendor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="warranty_expiration" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="getRecords">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="asset" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="asset_tag" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="assigned" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="assigned_to" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="assignment_group" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="attributes" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="can_print" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="category" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="change_control" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="checked_in" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="checked_out" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="comments" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="company" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="correlation_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cost" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cost_cc" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cost_center" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cpus" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="delivery_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="department" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="discovery_source" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="disks" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="disks_size" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="dns_domain" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="due" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="due_in" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="fault_count" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="first_discovered" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="fqdn" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="gl_account" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="guest_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="image_path" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="install_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="install_status" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="invoice_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="ip_address" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="justification" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="last_discovered" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="lease_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="location" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="mac_address" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="maintenance_schedule" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="managed_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="managed_domain" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="manufacturer" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="memory" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="model_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="model_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="monitor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="name" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="nics" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="object_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="operational_status" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="order_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="owned_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="po_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="purchase_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="schedule" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="serial_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="server" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="short_description" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="skip_sync" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="start_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="state" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="subcategory" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="support_group" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="supported_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_class_name" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_created_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_created_on" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_row" type="xsd:integer"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_set" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_state" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_state_comment" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_mod_count" type="xsd:integer"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_row_error" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_tags" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_target_sys_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_target_table" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_transform_map" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_updated_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_updated_on" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="template" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="template_import_log" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_approved_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_backup" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_business_unit" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_change_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_director" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_group" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_vp_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_configured_memory" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_core" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_cpu" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_decommission_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_disaster_backup" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_disk_space_gb" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_disposal_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_environment" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_floor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ios_or_os_version" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_l2_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_l3_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_l5_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_last_scan_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_manager" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_model_version" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_monitoring_tool" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_disk_drives" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_logical_processors" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_processor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_operating_system" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_os_version" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ppm" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_processor_type" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_project_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_rack" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_received_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_regulatory_compliance" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ritm_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_room" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ru_type" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_substatus" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_tentative_deploy_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_tier_level" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_vcpu" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="unverified" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="vcenter_ref" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="vcenter_uuid" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="vendor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="warranty_expiration" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="__use_view" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="__encoded_query" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="__limit" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="__first_row" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="__last_row" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="__order_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="__order_by_desc" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="__exclude_columns" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="getRecordsResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="getRecordsResult">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="asset" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="asset_tag" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="assigned" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="assigned_to" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="assignment_group" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="attributes" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="can_print" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="category" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="change_control" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="checked_in" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="checked_out" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="comments" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="company" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="correlation_id" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="cost" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="cost_cc" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="cost_center" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="cpus" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="delivery_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="department" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="discovery_source" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="disks" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="disks_size" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="dns_domain" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="due" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="due_in" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="fault_count" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="first_discovered" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="fqdn" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="gl_account" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="guest_id" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="image_path" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="install_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="install_status" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="invoice_number" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="ip_address" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="justification" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="last_discovered" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="lease_id" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="location" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="mac_address" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="maintenance_schedule" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="managed_by" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="managed_domain" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="manufacturer" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="memory" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="model_id" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="model_number" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="monitor" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="name" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="nics" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="object_id" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="operational_status" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="order_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="owned_by" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="po_number" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="purchase_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="schedule" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="serial_number" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="server" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="short_description" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="skip_sync" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="start_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="state" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="subcategory" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="support_group" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="supported_by" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="sys_class_name" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="sys_created_by" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="sys_created_on" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="sys_id" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_row" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_set" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_state" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_state_comment" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="sys_mod_count" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="sys_row_error" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="sys_tags" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="sys_target_sys_id" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="sys_target_table" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="sys_transform_map" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="sys_updated_by" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="sys_updated_on" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="template" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="template_import_log" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_approved_by" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_backup" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_business_unit" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_change_number" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_director" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_group" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_vp_approval" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_configured_memory" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_core" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_cpu" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_decommission_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_disaster_backup" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_disk_space_gb" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_disposal_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_environment" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_floor" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_ios_or_os_version" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_l2_approval" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_l3_approval" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_l5_approval" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_last_scan_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_manager" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_model_version" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_monitoring_tool" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_disk_drives" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_logical_processors" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_processor" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_operating_system" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_os_version" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_ppm" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_processor_type" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_project_number" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_rack" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_received_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_regulatory_compliance" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_ritm_number" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_room" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_ru_type" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_substatus" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_tentative_deploy_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_tier_level" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_vcpu" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="unverified" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="vcenter_ref" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="vcenter_uuid" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="vendor" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="warranty_expiration" type="xsd:string"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="update">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="asset" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="asset_tag" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="assigned" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="assigned_to" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="assignment_group" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="attributes" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="can_print" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="category" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="change_control" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="checked_in" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="checked_out" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="comments" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="company" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="correlation_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cost" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cost_cc" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cost_center" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cpus" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="delivery_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="department" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="discovery_source" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="disks" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="disks_size" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="dns_domain" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="due" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="due_in" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="fault_count" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="first_discovered" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="fqdn" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="gl_account" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="guest_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="image_path" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="install_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="install_status" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="invoice_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="ip_address" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="justification" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="last_discovered" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="lease_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="location" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="mac_address" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="maintenance_schedule" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="managed_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="managed_domain" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="manufacturer" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="memory" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="model_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="model_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="monitor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="name" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="nics" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="object_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="operational_status" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="order_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="owned_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="po_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="purchase_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="schedule" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="serial_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="server" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="short_description" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="skip_sync" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="start_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="state" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="subcategory" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="support_group" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="supported_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="sys_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="template" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="template_import_log" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_approved_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_backup" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_business_unit" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_change_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_director" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_group" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_vp_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_configured_memory" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_core" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_cpu" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_decommission_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_disaster_backup" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_disk_space_gb" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_disposal_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_environment" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_floor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ios_or_os_version" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_l2_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_l3_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_l5_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_last_scan_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_manager" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_model_version" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_monitoring_tool" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_disk_drives" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_logical_processors" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_processor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_operating_system" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_os_version" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ppm" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_processor_type" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_project_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_rack" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_received_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_regulatory_compliance" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ritm_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_room" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ru_type" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_substatus" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_tentative_deploy_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_tier_level" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_vcpu" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="unverified" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="vcenter_ref" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="vcenter_uuid" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="vendor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="warranty_expiration" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="updateResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_id" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="insert">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="asset" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="asset_tag" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="assigned" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="assigned_to" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="assignment_group" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="attributes" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="can_print" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="category" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="change_control" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="checked_in" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="checked_out" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="comments" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="company" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="correlation_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cost" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cost_cc" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cost_center" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cpus" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="delivery_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="department" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="discovery_source" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="disks" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="disks_size" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="dns_domain" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="due" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="due_in" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="fault_count" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="first_discovered" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="fqdn" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="gl_account" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="guest_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="image_path" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="install_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="install_status" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="invoice_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="ip_address" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="justification" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="last_discovered" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="lease_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="location" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="mac_address" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="maintenance_schedule" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="managed_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="managed_domain" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="manufacturer" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="memory" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="model_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="model_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="monitor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="name" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="nics" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="object_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="operational_status" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="order_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="owned_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="po_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="purchase_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="schedule" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="serial_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="server" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="short_description" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="skip_sync" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="start_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="state" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="subcategory" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="support_group" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="supported_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="template" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="template_import_log" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_approved_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_backup" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_business_unit" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_change_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_director" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_group" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_vp_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_configured_memory" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_core" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_cpu" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_decommission_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_disaster_backup" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_disk_space_gb" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_disposal_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_environment" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_floor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ios_or_os_version" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_l2_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_l3_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_l5_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_last_scan_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_manager" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_model_version" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_monitoring_tool" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_disk_drives" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_logical_processors" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_processor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_operating_system" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_os_version" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ppm" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_processor_type" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_project_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_rack" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_received_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_regulatory_compliance" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ritm_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_room" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ru_type" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_substatus" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_tentative_deploy_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_tier_level" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_vcpu" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="unverified" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="vcenter_ref" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="vcenter_uuid" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="vendor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="warranty_expiration" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="insertResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="sys_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="table" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="display_name" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="display_value" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="status" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="status_message" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="error_message" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="deleteMultiple">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="asset" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="asset_tag" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="assigned" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="assigned_to" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="assignment_group" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="attributes" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="can_print" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="category" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="change_control" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="checked_in" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="checked_out" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="comments" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="company" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="correlation_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cost" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cost_cc" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cost_center" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="cpus" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="delivery_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="department" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="discovery_source" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="disks" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="disks_size" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="dns_domain" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="due" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="due_in" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="fault_count" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="first_discovered" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="fqdn" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="gl_account" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="guest_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="image_path" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="install_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="install_status" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="invoice_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="ip_address" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="justification" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="last_discovered" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="lease_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="location" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="mac_address" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="maintenance_schedule" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="managed_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="managed_domain" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="manufacturer" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="memory" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="model_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="model_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="monitor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="name" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="nics" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="object_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="operational_status" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="order_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="owned_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="po_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="purchase_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="schedule" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="serial_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="server" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="short_description" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="skip_sync" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="start_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="state" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="subcategory" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="support_group" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="supported_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_class_name" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_created_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_created_on" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_row" type="xsd:integer"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_set" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_state" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_import_state_comment" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_mod_count" type="xsd:integer"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_row_error" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_tags" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_target_sys_id" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_target_table" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_transform_map" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_updated_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="sys_updated_on" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="template" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="template_import_log" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_approved_by" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_backup" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_business_unit" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_change_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_director" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_group" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_vp_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_configured_memory" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_core" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_cpu" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_decommission_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_disaster_backup" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_disk_space_gb" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_disposal_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_environment" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_floor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ios_or_os_version" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_l2_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_l3_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_l5_approval" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_last_scan_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_manager" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_model_version" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_monitoring_tool" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_disk_drives" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_logical_processors" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_processor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_operating_system" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_os_version" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ppm" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_processor_type" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_project_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_rack" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_received_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_regulatory_compliance" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ritm_number" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_room" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_ru_type" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_substatus" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_tentative_deploy_date" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_tier_level" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="u_vcpu" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="unverified" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="vcenter_ref" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="vcenter_uuid" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="vendor" type="xsd:string"/>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="warranty_expiration" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="deleteMultipleResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="count" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="deleteRecord">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="sys_id" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="deleteRecordResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="0" name="count" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="insertMultiple">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="1" name="record">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="asset" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="asset_tag" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="assigned" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="assigned_to" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="assignment_group" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="attributes" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="can_print" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="category" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="change_control" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="checked_in" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="checked_out" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="comments" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="company" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="correlation_id" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="cost" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="cost_cc" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="cost_center" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="cpus" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="delivery_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="department" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="discovery_source" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="disks" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="disks_size" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="dns_domain" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="due" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="due_in" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="fault_count" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="first_discovered" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="fqdn" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="gl_account" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="guest_id" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="image_path" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="install_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="install_status" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="invoice_number" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="ip_address" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="justification" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="last_discovered" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="lease_id" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="location" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="mac_address" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="maintenance_schedule" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="managed_by" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="managed_domain" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="manufacturer" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="memory" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="model_id" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="model_number" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="monitor" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="name" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="nics" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="object_id" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="operational_status" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="order_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="owned_by" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="po_number" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="purchase_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="schedule" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="serial_number" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="server" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="short_description" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="skip_sync" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="start_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="state" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="subcategory" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="support_group" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="supported_by" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="template" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="template_import_log" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_approved_by" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_backup" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_business_unit" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_change_number" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_director" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_group" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_ci_impacted_vp_approval" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_configured_memory" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_core" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_cpu" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_decommission_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_disaster_backup" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_disk_space_gb" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_disposal_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_environment" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_floor" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_ios_or_os_version" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_l2_approval" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_l3_approval" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_l5_approval" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_last_scan_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_manager" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_model_version" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_monitoring_tool" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_disk_drives" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_logical_processors" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_number_of_processor" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_operating_system" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_os_version" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_ppm" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_processor_type" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_project_number" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_rack" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_received_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_regulatory_compliance" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_ritm_number" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_room" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_ru_type" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_substatus" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_tentative_deploy_date" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_tier_level" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="u_vcpu" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="unverified" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="vcenter_ref" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="vcenter_uuid" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="vendor" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="warranty_expiration" type="xsd:string"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="insertMultipleResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="1" name="insertResponse">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="1" minOccurs="1" name="sys_id" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="1" name="table" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="1" name="display_name" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="1" name="display_value" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="1" name="status" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="status_message" type="xsd:string"/>
+                                    <xsd:element maxOccurs="1" minOccurs="0" name="error_message" type="xsd:string"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="insertSoapIn">
+        <wsdl:part element="tns:insert" name="u_vmware_virtual_machine_instances"/>
+    </wsdl:message>
+    <wsdl:message name="getSoapOut">
+        <wsdl:part element="tns:getResponse" name="u_vmware_virtual_machine_instances"/>
+    </wsdl:message>
+    <wsdl:message name="deleteMultipleSoapOut">
+        <wsdl:part element="tns:deleteMultipleResponse" name="u_vmware_virtual_machine_instances"/>
+    </wsdl:message>
+    <wsdl:message name="updateSoapOut">
+        <wsdl:part element="tns:updateResponse" name="u_vmware_virtual_machine_instances"/>
+    </wsdl:message>
+    <wsdl:message name="insertMultipleSoapOut">
+        <wsdl:part element="tns:insertMultipleResponse" name="u_vmware_virtual_machine_instances"/>
+    </wsdl:message>
+    <wsdl:message name="getKeysSoapIn">
+        <wsdl:part element="tns:getKeys" name="u_vmware_virtual_machine_instances"/>
+    </wsdl:message>
+    <wsdl:message name="getKeysSoapOut">
+        <wsdl:part element="tns:getKeysResponse" name="u_vmware_virtual_machine_instances"/>
+    </wsdl:message>
+    <wsdl:message name="deleteRecordSoapIn">
+        <wsdl:part element="tns:deleteRecord" name="u_vmware_virtual_machine_instances"/>
+    </wsdl:message>
+    <wsdl:message name="getSoapIn">
+        <wsdl:part element="tns:get" name="u_vmware_virtual_machine_instances"/>
+    </wsdl:message>
+    <wsdl:message name="getRecordsSoapIn">
+        <wsdl:part element="tns:getRecords" name="u_vmware_virtual_machine_instances"/>
+    </wsdl:message>
+    <wsdl:message name="updateSoapIn">
+        <wsdl:part element="tns:update" name="u_vmware_virtual_machine_instances"/>
+    </wsdl:message>
+    <wsdl:message name="deleteRecordSoapOut">
+        <wsdl:part element="tns:deleteRecordResponse" name="u_vmware_virtual_machine_instances"/>
+    </wsdl:message>
+    <wsdl:message name="getRecordsSoapOut">
+        <wsdl:part element="tns:getRecordsResponse" name="u_vmware_virtual_machine_instances"/>
+    </wsdl:message>
+    <wsdl:message name="insertMultipleSoapIn">
+        <wsdl:part element="tns:insertMultiple" name="u_vmware_virtual_machine_instances"/>
+    </wsdl:message>
+    <wsdl:message name="insertSoapOut">
+        <wsdl:part element="tns:insertResponse" name="u_vmware_virtual_machine_instances"/>
+    </wsdl:message>
+    <wsdl:message name="deleteMultipleSoapIn">
+        <wsdl:part element="tns:deleteMultiple" name="u_vmware_virtual_machine_instances"/>
+    </wsdl:message>
+    <wsdl:portType name="ServiceNowSoap">
+        <wsdl:operation name="insert">
+            <wsdl:input message="tns:insertSoapIn"/>
+            <wsdl:output message="tns:insertSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="update">
+            <wsdl:input message="tns:updateSoapIn"/>
+            <wsdl:output message="tns:updateSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteMultiple">
+            <wsdl:input message="tns:deleteMultipleSoapIn"/>
+            <wsdl:output message="tns:deleteMultipleSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="getKeys">
+            <wsdl:input message="tns:getKeysSoapIn"/>
+            <wsdl:output message="tns:getKeysSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteRecord">
+            <wsdl:input message="tns:deleteRecordSoapIn"/>
+            <wsdl:output message="tns:deleteRecordSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="get">
+            <wsdl:input message="tns:getSoapIn"/>
+            <wsdl:output message="tns:getSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="getRecords">
+            <wsdl:input message="tns:getRecordsSoapIn"/>
+            <wsdl:output message="tns:getRecordsSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="insertMultiple">
+            <wsdl:input message="tns:insertMultipleSoapIn"/>
+            <wsdl:output message="tns:insertMultipleSoapOut"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="ServiceNowSoap" type="tns:ServiceNowSoap">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="insert">
+            <soap:operation soapAction="http://www.service-now.com/u_vmware_virtual_machine_instances/insert" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="update">
+            <soap:operation soapAction="http://www.service-now.com/u_vmware_virtual_machine_instances/update" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="deleteMultiple">
+            <soap:operation soapAction="http://www.service-now.com/u_vmware_virtual_machine_instances/deleteMultiple" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getKeys">
+            <soap:operation soapAction="http://www.service-now.com/u_vmware_virtual_machine_instances/getKeys" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="deleteRecord">
+            <soap:operation soapAction="http://www.service-now.com/u_vmware_virtual_machine_instances/deleteRecord" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="get">
+            <soap:operation soapAction="http://www.service-now.com/u_vmware_virtual_machine_instances/get" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getRecords">
+            <soap:operation soapAction="http://www.service-now.com/u_vmware_virtual_machine_instances/getRecords" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="insertMultiple">
+            <soap:operation soapAction="http://www.service-now.com/u_vmware_virtual_machine_instances/insertMultiple" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="ServiceNow_u_vmware_virtual_machine_instances">
+        <wsdl:port binding="tns:ServiceNowSoap" name="ServiceNowSoap">
+            <soap:address location="https://hclefhdev.service-now.com/u_vmware_virtual_machine_instances.do?SOAP"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
