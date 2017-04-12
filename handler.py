@@ -71,13 +71,13 @@ def lambda_handler():
     server.u_environment = ""
     server.u_model_version = ""
     server.u_number_of_disk_drives = ""
-    server.u_number_of_processor = get_cpu(data)
+    server.u_number_of_processor = ""
     server.u_operating_system = ""
     server.u_regulatory_compliance = ""
     server.u_os_version = ""
     server.u_project_number = ""
     server.u_tier_level = ""
-    server.u_vcpu = ""
+    server.u_vcpu = get_cpu(data)
     server.u_core = ""
     server.install_status = ""
     server.u_substatus = ""

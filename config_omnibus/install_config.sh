@@ -11,4 +11,7 @@ cd $DIR
 cp -f ./nginx.conf /opt/nginx-uwsgi/embedded/conf/nginx.conf
 cat ./servicenow.ini |sed "s:<<INSTALL_DIR>>:$BASEDIR:g" > /opt/nginx-uwsgi/etc/uwsgi.d/servicenow.ini
 
+cd $BASEDIR
+/opt/nginx-uwsgi/embedded/bin/pip install -r ./requirements.txt
+
 service supervisor restart
