@@ -112,6 +112,15 @@ def get_mem(data):
     else:
         return "N/A"
 
+def total_seconds(dt):
+     # Keep backward compatibility with Python 2.6 which doesn't have
+     # this method
+     if hasattr(dt, 'total_seconds'):
+         return dt.total_seconds()
+     else:
+         return (td.microseconds + (td.seconds + td.days * 24 * 3600) * 10**6) / 10**6
+
+
 def validateRequest(request):
     if not 'X-Signature' in request.headers or not 'Date' in request.headers:
         return False
@@ -123,7 +132,7 @@ def validateRequest(request):
         
     date = dateutil.parser.parse(date)
     now = datetime.now(utc)
-    delta = abs((now - date).total_seconds())
+    delta = abs(total_seconds(now - date))
     return delta < 300
 
 
