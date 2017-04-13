@@ -82,9 +82,12 @@ def lambda_handler():
     server.install_status = ""
     server.u_substatus = ""
 
-
-    client.service.insert(server)
-    return 'Ok'
+    try:
+        client.service.insert(server)
+        return 'Ok'
+    except e:
+        logging.exception('Servicenow request failed')
+        raise
     
 def get_ip(data):
     if data['SCALR_EVENT_INTERNAL_IP']:
@@ -118,7 +121,7 @@ def total_seconds(dt):
      if hasattr(dt, 'total_seconds'):
          return dt.total_seconds()
      else:
-         return (td.microseconds + (td.seconds + td.days * 24 * 3600) * 10**6) / 10**6
+         return (dt.microseconds + (dt.seconds + dt.days * 24 * 3600) * 10**6) / 10**6
 
 
 def validateRequest(request):
@@ -148,6 +151,9 @@ def loadConfig(filename):
                 globals()[key] = options[key].encode('ascii')
             elif key == 'PROXY' and options[key]:
                 globals()[key] = {'http': options[key], 'https': options[key]}
+
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0')
 
 loadConfig(config_file)
 logging.basicConfig(level=logging.INFO)
