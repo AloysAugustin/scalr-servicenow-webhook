@@ -87,7 +87,7 @@ def lambda_handler():
         return 'Ok'
     except e:
         logging.exception('Servicenow request failed')
-        raise
+        abort(500)
     
 def get_ip(data):
     if data['SCALR_EVENT_INTERNAL_IP']:
