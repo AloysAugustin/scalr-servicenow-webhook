@@ -60,7 +60,7 @@ def lambda_handler():
     server.manufacturer = ""
     server.name = data["SCALR_SERVER_HOSTNAME"]
     server.owned_by = data["SCALR_EVENT_FARM_OWNER_EMAIL"]
-    server.short_description = "Server managed by Scalr, Account: {}, Environment: {}, Farm: {}".format(
+    server.short_description = "Server managed by Scalr, Account: {0}, Environment: {1}, Farm: {2}".format(
                                 data["SCALR_ACCOUNT_NAME"],
                                 data["SCALR_ENV_NAME"],
                                 data["SCALR_FARM_NAME"])
