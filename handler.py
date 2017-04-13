@@ -132,10 +132,10 @@ def loadConfig(filename):
         options = json.loads(f.read())
         for key in options:
             if key in ['USERNAME', 'PASSWORD', 'URL']:
-                logging.info('Loaded config: {}'.format(key))
+                logging.info('Loaded config: {0}'.format(key))
                 globals()[key] = options[key]
             elif key in ['SCALR_SIGNING_KEY']:
-                logging.info('Loaded config: {}'.format(key))
+                logging.info('Loaded config: {0}'.format(key))
                 globals()[key] = options[key].encode('ascii')
             elif key == 'PROXY' and options[key]:
                 globals()[key] = {'http': options[key], 'https': options[key]}
