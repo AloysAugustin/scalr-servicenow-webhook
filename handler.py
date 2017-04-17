@@ -53,7 +53,6 @@ def lambda_handler():
     server.department = ""
     server.dns_domain = ""
     server.install_date = datetime.now(utc).isoformat()
-    server.u_tentative_deploy_date = ""
     server.ip_address = get_ip(data)
     server.location = data["SCALR_CLOUD_LOCATION"]
     server.mac_address = ""
