@@ -85,7 +85,7 @@ def lambda_handler():
     try:
         client.service.insert(server)
         return 'Ok'
-    except Exception as e:
+    except Exception:
         logging.exception('Servicenow request failed')
         abort(500)
     
