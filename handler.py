@@ -82,12 +82,12 @@ def lambda_handler():
     server.u_substatus = ""
 
     try:
-        client.service.insert(server)
-        logging.info(client.last_received())
+        print client.service.insert(server)
+        print client.last_received()
         return 'Ok'
     except Exception:
         logging.exception('Servicenow request failed')
-        abort(500)
+        raise
     
 def get_ip(data):
     if data['SCALR_EVENT_INTERNAL_IP']:
