@@ -115,7 +115,7 @@ headers = {
 }
 
 
-r = requests.post('http://localhost:5000/servicenow/', headers=headers, data=payload)
+r = requests.post('http://localhost:80/servicenow/', headers=headers, data=payload)
 print r.status_code
 print r.text
 
