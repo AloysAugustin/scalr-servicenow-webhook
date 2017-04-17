@@ -80,6 +80,7 @@ def lambda_handler():
     server.u_core = ""
     server.install_status = ""
     server.u_substatus = ""
+    print server
 
     try:
         print client.service.insert(server)
