@@ -83,6 +83,7 @@ def lambda_handler():
 
     try:
         client.service.insert(server)
+        logging.info(client.last_received())
         return 'Ok'
     except Exception:
         logging.exception('Servicenow request failed')
