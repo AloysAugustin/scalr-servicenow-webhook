@@ -61,7 +61,7 @@ def lambda_handler():
     server.department = data["SCALR_ACCOUNT_NAME"]
     server.dns_domain = "tceh.net"
     server.install_date = datetime.now(utc).isoformat()
-    server.u_tentative_deploy_date = datetime.now(utc).isoformat()
+#    server.u_tentative_deploy_date = datetime.now(utc).isoformat()
     server.ip_address = get_ip(data)
     server.location = "Mesquite Data Center"
     server.mac_address = random_mac()
