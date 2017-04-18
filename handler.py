@@ -8,6 +8,7 @@ import json
 import logging
 import hmac 
 import binascii 
+import random
 import dateutil.parser 
 from hashlib import sha1 
 from datetime import tzinfo, timedelta, datetime 
@@ -49,16 +50,17 @@ def lambda_handler():
     client = Client(URL, username=USERNAME, password=PASSWORD, proxy=PROXY)
     server = client.factory.create('ns0:insert')
 
-    server.company = "VistraEnergy"
-    server.department = ""
-    server.dns_domain = ""
+    server.company = "Energy Future Holdings Co"
+    server.department = data["SCALR_ACCOUNT_NAME"]
+    server.dns_domain = "tceh.net"
     server.install_date = datetime.now(utc).isoformat()
+    server.u_tentative_deploy_date = datetime.now(utc).isoformat()
     server.ip_address = get_ip(data)
-    server.location = data["SCALR_CLOUD_LOCATION"]
-    server.mac_address = ""
-    server.manufacturer = ""
+    server.location = "Mesquite Data Center"
+    server.mac_address = random_mac()
+    server.manufacturer = "VMware"
     server.name = data["SCALR_SERVER_HOSTNAME"]
-    server.owned_by = data["SCALR_EVENT_FARM_OWNER_EMAIL"]
+    server.owned_by = data["SCALR_EVENT_FARM_OWNER_EMAIL"].split('@')[0]
     server.short_description = "Server managed by Scalr, Account: {0}, Environment: {1}, Farm: {2}".format(
                                 data["SCALR_ACCOUNT_NAME"],
                                 data["SCALR_ENV_NAME"],
@@ -66,20 +68,20 @@ def lambda_handler():
     server.start_date = datetime.now(utc).isoformat()
     server.u_configured_memory = get_mem(data)
     server.u_decommission_date = ""
-    server.u_disk_space_gb = ""
-    server.u_environment = ""
-    server.u_model_version = ""
-    server.u_number_of_disk_drives = ""
-    server.u_number_of_processor = ""
-    server.u_operating_system = ""
+    server.u_disk_space_gb = "100"
+    server.u_environment = data["SCALR_ENV_NAME"]
+    server.u_model_version = "vmx-08"
+    server.u_number_of_disk_drives = "1"
+    server.u_number_of_processor = get_cpu(data)
+    server.u_operating_system = "Linux"
     server.u_regulatory_compliance = ""
-    server.u_os_version = ""
+    server.u_os_version = "Red Hat Enterprise Linux 6 (64-bit)"
     server.u_project_number = ""
-    server.u_tier_level = ""
+    server.u_tier_level = "4"
     server.u_vcpu = get_cpu(data)
-    server.u_core = ""
-    server.install_status = ""
-    server.u_substatus = ""
+    server.u_core = get_cpu(data)
+    server.install_status = "-1"
+    server.u_substatus = "Build"
     print server
 
     try:
@@ -115,6 +117,13 @@ def get_mem(data):
         return vmware_instance_types.get(data["SCALR_SERVER_TYPE"], ["N/A", "N/A"])[1]
     else:
         return "N/A"
+
+def random_mac():
+    return "52:54:00:%02x:%02x:%02x" % (
+        random.randint(0, 255),
+        random.randint(0, 255),
+        random.randint(0, 255),
+        )
 
 def total_seconds(dt):
      # Keep backward compatibility with Python 2.6 which doesn't have
@@ -153,8 +162,8 @@ def loadConfig(filename):
             elif key == 'PROXY' and options[key]:
                 globals()[key] = {'http': options[key], 'https': options[key]}
 
-if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0')
-
 loadConfig(config_file)
 logging.basicConfig(level=logging.INFO)
+
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0')
