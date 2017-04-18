@@ -17,18 +17,17 @@ from suds.client import Client
 
 config_file = './config.json'
 
-# Will be overridden if present in config_file
+# Configuration settings, will be overridden if present in config_file
 SCALR_SIGNING_KEY = ''
 USERNAME = ''
 PASSWORD = ''
 PROXY = None
 URL = ''
 
-
-ZERO = timedelta(0) 
-
 app = Flask(__name__)
 
+# UTC timezone description
+ZERO = timedelta(0)
 class UTC(tzinfo):
     def utcoffset(self, dt):
         return ZERO
@@ -39,6 +38,14 @@ class UTC(tzinfo):
 
 utc = UTC() 
 
+# suds monkey-patching for compatibility woth python 2.6
+class TestClient(suds.client.SoapClient):
+    def failed(self, binding, error):
+        raise error
+
+suds.client.SoapClient = TestClient
+
+# handler code
 @app.route("/servicenow/", methods=['POST'])
 def lambda_handler():
 
