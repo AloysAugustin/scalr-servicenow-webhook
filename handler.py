@@ -107,23 +107,23 @@ def get_ip(data):
 
 vmware_instance_types = {
     # name : [vcpu, memory]
-    "micro" : ["1", "1024MB"],
-    "small" : ["2", "2048MB"],
-    "medium" : ["4", "4096MB"],
-    "large" : ["8", "8192MB"]
+    "micro" : ["1", "1024"],
+    "small" : ["2", "2048"],
+    "medium" : ["4", "4096"],
+    "large" : ["8", "8192"]
 }
 
 def get_cpu(data):
     if data["SCALR_CLOUD_PLATFORM"] == "vmware":
-        return vmware_instance_types.get(data["SCALR_SERVER_TYPE"], ["N/A", "N/A"])[0]
+        return vmware_instance_types.get(data["SCALR_SERVER_TYPE"], ["2", "2048"])[0]
     else:
-        return "N/A"
+        return "2"
 
 def get_mem(data):
     if data["SCALR_CLOUD_PLATFORM"] == "vmware":
-        return vmware_instance_types.get(data["SCALR_SERVER_TYPE"], ["N/A", "N/A"])[1]
+        return vmware_instance_types.get(data["SCALR_SERVER_TYPE"], ["2", "2048"])[1]
     else:
-        return "N/A"
+        return "2048"
 
 def random_mac():
     return "52:54:00:%02x:%02x:%02x" % (
