@@ -92,7 +92,7 @@ def lambda_handler():
         install_status = "-1",
         u_substatus = "Build"
     )
-    responseXML = c.last_received()
+    responseXML = client.last_received()
     logging.info("%d: %s", status, responseXML)
     return str(responseXML), status
  
