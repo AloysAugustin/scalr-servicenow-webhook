@@ -9,6 +9,7 @@ import logging
 import hmac 
 import binascii 
 import random
+import sys
 import dateutil.parser 
 from hashlib import sha1 
 from datetime import tzinfo, timedelta, datetime 
@@ -23,6 +24,8 @@ USERNAME = ''
 PASSWORD = ''
 PROXY = None
 URL = ''
+
+logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 
 app = Flask(__name__)
 
@@ -54,51 +57,45 @@ def lambda_handler():
     body = json.loads(request.data)
     data = body["data"]
     
-    client = Client(URL, username=USERNAME, password=PASSWORD, proxy=PROXY)
-    server = client.factory.create('ns0:insert')
+    client = Client(URL, username=USERNAME, password=PASSWORD, proxy=PROXY, faults=False)
 
-    server.company = "Energy Future Holdings Co"
-    server.department = data["SCALR_ACCOUNT_NAME"]
-    server.dns_domain = "tceh.net"
-    server.install_date = datetime.now(utc).isoformat()
-#    server.u_tentative_deploy_date = datetime.now(utc).isoformat()
-    server.ip_address = get_ip(data)
-    server.location = "Mesquite Data Center"
-    server.mac_address = random_mac()
-    server.manufacturer = "VMware"
-    server.name = data["SCALR_SERVER_HOSTNAME"]
-    server.owned_by = data["SCALR_EVENT_FARM_OWNER_EMAIL"].split('@')[0]
-    server.short_description = "Server managed by Scalr, Account: {0}, Environment: {1}, Farm: {2}".format(
-                                data["SCALR_ACCOUNT_NAME"],
-                                data["SCALR_ENV_NAME"],
-                                data["SCALR_FARM_NAME"])
-    server.start_date = datetime.now(utc).isoformat()
-    server.u_configured_memory = get_mem(data)
-    server.u_decommission_date = ""
-    server.u_disk_space_gb = "100"
-    server.u_environment = data["SCALR_ENV_NAME"]
-    server.u_model_version = "vmx-08"
-    server.u_number_of_disk_drives = "1"
-    server.u_number_of_processor = get_cpu(data)
-    server.u_operating_system = "Linux"
-    server.u_regulatory_compliance = ""
-    server.u_os_version = "Red Hat Enterprise Linux 6 (64-bit)"
-    server.u_project_number = ""
-    server.u_tier_level = "4"
-    server.u_vcpu = get_cpu(data)
-    server.u_core = get_cpu(data)
-    server.install_status = "-1"
-    server.u_substatus = "Build"
-    print server
-
-    try:
-        print client.service.insert(server)
-        print client.last_received()
-        return 'Ok'
-    except Exception:
-        logging.exception('Servicenow request failed')
-        raise
-    
+    status, response = client.service.insert(
+        company = "Energy Future Holdings Co",
+        department = data["SCALR_ACCOUNT_NAME"],
+        dns_domain = "tceh.net",
+        install_date = datetime.now(utc).isoformat(),
+        ip_address = get_ip(data),
+        location = "Mesquite Data Center",
+        mac_address = random_mac(),
+        manufacturer = "VMware",
+        name = data["SCALR_SERVER_HOSTNAME"],
+        owned_by = data["SCALR_EVENT_FARM_OWNER_EMAIL"].split('@')[0],
+        short_description = "Server managed by Scalr, Account: {0}, Environment: {1}, Farm: {2}".format(
+                             data["SCALR_ACCOUNT_NAME"],
+                             data["SCALR_ENV_NAME"],
+                             data["SCALR_FARM_NAME"]),
+        start_date = datetime.now(utc).isoformat(),
+        u_configured_memory = get_mem(data),
+        u_decommission_date = "",
+        u_disk_space_gb = "100",
+        u_environment = data["SCALR_ENV_NAME"],
+        u_model_version = "vmx-08",
+        u_number_of_disk_drives = "1",
+        u_number_of_processor = get_cpu(data),
+        u_operating_system = "Linux",
+        u_regulatory_compliance = "",
+        u_os_version = "Red Hat Enterprise Linux 6 (64-bit)",
+        u_project_number = "",
+        u_tier_level = "4",
+        u_vcpu = get_cpu(data),
+        u_core = get_cpu(data),
+        install_status = "-1",
+        u_substatus = "Build"
+    )
+    responseXML = c.last_received()
+    logging.info("%d: %s", status, responseXML)
+    return str(responseXML), status
+ 
 def get_ip(data):
     if data['SCALR_EVENT_INTERNAL_IP']:
         return data['SCALR_EVENT_INTERNAL_IP']
@@ -170,7 +167,6 @@ def loadConfig(filename):
                 globals()[key] = {'http': options[key], 'https': options[key]}
 
 loadConfig(config_file)
-logging.basicConfig(level=logging.INFO)
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
