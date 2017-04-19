@@ -81,7 +81,8 @@ payload = """{
     "SCALR_SERVER_HOSTNAME": "ubuntu",
     "SCALR_SERVER_ID": "5bbd72c5-908c-4535-a7ec-2fbf56486ff3",
     "SCALR_SERVER_TYPE": "0f52797dd8ba",
-    "tests": "slave"
+    "tests": "slave",
+    "environment": "Development"
   },
   "endpointId": "03c8b252-1190-44c4-b9da-1074eaa215fc",
   "eventId": "a71ff7bc-0fa7-4cc2-9e0b-9fa3581888ce",
