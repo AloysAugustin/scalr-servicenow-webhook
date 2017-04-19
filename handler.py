@@ -25,8 +25,9 @@ PASSWORD = ''
 PROXY = None
 URL = ''
 
-logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S"
 
+logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 app = Flask(__name__)
 
 # UTC timezone description
@@ -63,7 +64,7 @@ def lambda_handler():
         company = "Energy Future Holdings Co",
         department = data["SCALR_ACCOUNT_NAME"],
         dns_domain = "tceh.net",
-        install_date = datetime.now(utc).isoformat(),
+        install_date = datetime.now(utc).strftime(DATETIME_FORMAT),
         ip_address = get_ip(data),
         location = "Mesquite Data Center",
         mac_address = random_mac(),
@@ -74,11 +75,11 @@ def lambda_handler():
                              data["SCALR_ACCOUNT_NAME"],
                              data["SCALR_ENV_NAME"],
                              data["SCALR_FARM_NAME"]),
-        start_date = datetime.now(utc).isoformat(),
+        start_date = datetime.now(utc).strftime(DATETIME_FORMAT),
         u_configured_memory = get_mem(data),
         u_decommission_date = "",
         u_disk_space_gb = "100",
-        u_environment = data["SCALR_ENV_NAME"],
+        u_environment = data["environment"],
         u_model_version = "vmx-08",
         u_number_of_disk_drives = "1",
         u_number_of_processor = get_cpu(data),
